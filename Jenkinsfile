@@ -11,6 +11,10 @@ pipeline {
     
     stages {
         stage('master-branch') {
+		
+			when {
+				branch 'master'
+			}
             
             steps {
                 
