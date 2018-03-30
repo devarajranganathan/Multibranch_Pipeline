@@ -14,7 +14,7 @@ pipeline {
             
             steps {
                 
-                ws(dir: "C:\\Devaraj\\Test\\"){
+                dir("C:\\Devaraj\\Test\\"){
                     
                     script{
                         strFile1 = "c.vbs"
