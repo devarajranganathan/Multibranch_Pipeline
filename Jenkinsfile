@@ -1,5 +1,5 @@
 
-'  This comment is only added to push Jenkinsfile again
+//This comment is only added to push Jenkinsfile again
 
 def strFile = "c.vbs"
 def strFile_A = "a.vbs"
