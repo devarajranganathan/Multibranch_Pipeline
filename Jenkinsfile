@@ -17,7 +17,9 @@ pipeline {
             }                
             
             steps {
-				bat(script: "${strFile}", returnStatus: true, returnStdout: true)
+				ws(dir: "C:\\Devaraj\\Test\\"){
+					bat(script: "${strFile}", returnStatus: true, returnStdout: true)
+				}
             }
         }
 	}
