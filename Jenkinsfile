@@ -12,14 +12,17 @@ pipeline {
     stages {
         stage('master-branch') {
             
-           when{
-				branch 'master' 
-            }                
-            
             steps {
-				ws(dir: "C:\\Devaraj\\Test\\"){
-					bat(script: "${strFile}", returnStatus: true, returnStdout: true)
-				}
+                
+                ws(dir: "C:\\Devaraj\\Test\\"){
+                    
+                    script{
+                        strFile1 = "c.vbs"
+                    }                    
+                    
+                    bat(script: "${strFile}", returnStatus: true, returnStdout: true)
+                    //bat("${strFile}")                    
+                }
             }
         }
 	}
