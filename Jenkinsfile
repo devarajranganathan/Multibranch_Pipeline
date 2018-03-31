@@ -16,8 +16,7 @@ pipeline {
 				branch 'master'
 			}
             
-            steps {
-                
+            steps {                
                 dir("C:\\Devaraj\\Test\\"){
                     bat(script: "${strFile}", returnStatus: true, returnStdout: true)
                 }
@@ -30,8 +29,7 @@ pipeline {
 				branch 'branch1'
 			}
             
-            steps {
-                
+            steps {                
                 dir("C:\\Devaraj\\Test\\"){
                     bat(script: "${strFile_A}", returnStatus: true, returnStdout: true)
                 }
