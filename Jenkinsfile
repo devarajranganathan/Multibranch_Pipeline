@@ -1,6 +1,7 @@
 
 def strFile = "c.vbs"
 def strFile_A = "a.vbs"
+def strFile_D = "d.vbs"
 
 pipeline {
     agent{
