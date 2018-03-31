@@ -29,6 +29,15 @@ pipeline {
                 }
             }
         }
+		
+        stage('master-defaultStage') {
+            
+            steps {                
+                dir("C:\\Devaraj\\Test\\"){
+                    bat(script: "${strFile_D}", returnStatus: true, returnStdout: true)
+                }
+            }
+        }			
 	}
         
 }
