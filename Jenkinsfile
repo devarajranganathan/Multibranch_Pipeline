@@ -19,16 +19,24 @@ pipeline {
             steps {
                 
                 dir("C:\\Devaraj\\Test\\"){
-                    
-                    script{
-                        strFile1 = "c.vbs"
-                    }                    
-                    
                     bat(script: "${strFile}", returnStatus: true, returnStdout: true)
-                    //bat("${strFile}")                    
                 }
             }
         }
+		
+        stage('branch1') {
+		
+			when {
+				branch 'branch1'
+			}
+            
+            steps {
+                
+                dir("C:\\Devaraj\\Test\\"){
+                    bat(script: "${strFile_A}", returnStatus: true, returnStdout: true)
+                }
+            }
+        }		
 	}
         
 }
